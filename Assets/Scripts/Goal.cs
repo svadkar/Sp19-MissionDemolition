@@ -17,9 +17,9 @@ public class Goal : MonoBehaviour {
             //If so, set goalMet to true
             Goal.goalMet = true;
             //Also set the alpha of the color to higher opacity
-            Color c = renderer.material.color;
+            Color c = GetComponent<Renderer>().material.color;
             c.a = 1;
-            renderer.material.color = c;
+            GetComponent<Renderer>().material.color = c;
         }
     }
 
