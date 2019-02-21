@@ -44,7 +44,7 @@ public class FollowCam : MonoBehaviour {
             if (poi.tag == "Projectile")
             {
                 //If it is sleeping (that is, not moving)
-                if (poi.rigidbody.IsSleeping())
+                if (poi.GetComponent<Rigidbody>().IsSleeping())
                 {
                     //return to default view
                     poi = null;
