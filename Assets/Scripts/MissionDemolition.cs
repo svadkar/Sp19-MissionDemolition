@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum GameMode
 {
@@ -15,8 +16,8 @@ public class MissionDemolition : MonoBehaviour {
 
     //fields set in the unity Inspector pane
     public GameObject[] castles;            //An array of the castles
-    public GUIText gtLevel;                 //The GT_Level GUIText
-    public GUIText gtScore;                 //The GT_Score GUIText
+    public Text uitLevel;                 //The GT_Level GUIText
+    public Text uitShots;                 //The GT_Score GUIText
 
     public Vector3 castlePos;               //The palce to put castles
 
@@ -75,8 +76,8 @@ public class MissionDemolition : MonoBehaviour {
     void ShowGT ()
     {
         //Show the data in the GUITexts
-        gtLevel.text = "Level: " + (level + 1) + " of " + levelMax;
-        gtScore.text = "Shots Taken: " + shotsTaken;
+        uitLevel.text = "Level: " + (level + 1) + " of " + levelMax;
+        uitShots.text = "Shots Taken: " + shotsTaken;
     }
 
     void Update()
